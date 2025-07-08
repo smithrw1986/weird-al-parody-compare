@@ -1,8 +1,14 @@
 // No import needed
 
 export async function handler(event) {
-  const { track, artist } = JSON.parse(event.body);
+  if (event.httpMethod !== "POST") {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: "Method Not Allowed. Use POST." }),
+    };
+  }
 
+  const { track, artist } = JSON.parse(event.body);
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const authString = Buffer.from(`${clientId}:${clientSecret}`).toString(
