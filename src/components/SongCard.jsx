@@ -7,8 +7,16 @@ export default function SongCard({ title, artist }) {
     async function fetchEmbed() {
       const res = await fetch("/.netlify/functions/getSpotifyEmbedUrl", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ track: title, artist }),
       });
+
+      if (!res.ok) {
+        console.error("Function error:", res.status);
+        return;
+      }
 
       const data = await res.json();
       if (data.embedUrl) {
