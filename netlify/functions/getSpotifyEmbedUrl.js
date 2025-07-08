@@ -1,9 +1,8 @@
 import fetch from "node-fetch";
 
-export async function handler(event, context) {
+export async function handler(event) {
   const { track, artist } = JSON.parse(event.body);
 
-  // 1. Get Spotify access token (Client Credentials Flow)
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const authString = Buffer.from(`${clientId}:${clientSecret}`).toString(
@@ -22,7 +21,6 @@ export async function handler(event, context) {
   const tokenData = await tokenRes.json();
   const accessToken = tokenData.access_token;
 
-  // 2. Search for the track
   const searchQuery = `track:${track} artist:${artist}`;
   const searchRes = await fetch(
     `https://api.spotify.com/v1/search?q=${encodeURIComponent(
