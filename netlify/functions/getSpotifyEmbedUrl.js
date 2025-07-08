@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+// No import needed
 
 export async function handler(event) {
   const { track, artist } = JSON.parse(event.body);
