@@ -46,24 +46,12 @@ export default function SongCard({ title, artist, album, year, label }) {
 
       {embedUrl && (
         <div className="embed-container">
-          <p className="embed-label">Spotify Preview</p>
           <iframe
             src={embedUrl}
-            width="100%"
-            height="80"
-            frameBorder="0"
-            allow="encrypted-media"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
             allowTransparency="true"
           ></iframe>
-          <p className="open-link">
-            <a
-              href={embedUrl.replace("/embed/", "/")}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open in Spotify
-            </a>
-          </p>
         </div>
       )}
     </div>
