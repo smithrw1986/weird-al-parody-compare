@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
-export default function SongCard({ title, artist, album, year, label }) {
-  const [albumArt, setAlbumArt] = useState(null);
+export default function SongCard({
+  title,
+  artist,
+  album,
+  year,
+  label,
+  youtubeId,
+}) {
   const [embedUrl, setEmbedUrl] = useState("");
 
   useEffect(() => {
@@ -22,7 +28,6 @@ export default function SongCard({ title, artist, album, year, label }) {
       const data = await res.json();
       if (data.embedUrl) {
         setEmbedUrl(data.embedUrl);
-        setAlbumArt(data.albumArt);
       }
     }
     fetchEmbed();
@@ -31,12 +36,17 @@ export default function SongCard({ title, artist, album, year, label }) {
   return (
     <div className="song-card">
       <div className="card-label">{label}</div>
-      {albumArt && (
-        <img
-          className="album-art"
-          src={albumArt}
-          alt={`${album} album cover`}
-        />
+
+      {youtubeId && (
+        <div className="video-container">
+          <iframe
+            src={`https://www.youtube.com/embed/${youtubeId}`}
+            title={`${title} music video`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       )}
 
       <h3>{title}</h3>
@@ -48,10 +58,22 @@ export default function SongCard({ title, artist, album, year, label }) {
         <div className="embed-container">
           <iframe
             src={embedUrl}
+            width="100%"
+            height="80"
+            frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
             allowTransparency="true"
           ></iframe>
+          <p className="open-link">
+            <a
+              href={embedUrl.replace("/embed/", "/")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Have a Listen on Spotify
+            </a>
+          </p>
         </div>
       )}
     </div>
