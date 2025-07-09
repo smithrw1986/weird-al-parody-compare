@@ -17,10 +17,12 @@ export default function SongPairViewer() {
 
   return (
     <div>
-      <h2>Parody vs Original</h2>
-      <div className="song-container">
-        <SongCard {...pair.parody} />
-        <SongCard {...pair.original} />
+      <div className="song-container-wrapper">
+        <div className="song-container">
+          <SongCard {...pair.parody} label="Parody" />
+          <div className="vs-label">vs</div>
+          <SongCard {...pair.original} label="Original" />
+        </div>
       </div>
       <div className="controls">
         <button onClick={handlePrev}>Previous</button>

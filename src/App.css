@@ -1,12 +1,44 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121212;
+}
+
 .song-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  align-items: center;
+}
+
+.vs-label {
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 1rem;
 }
 
 .song-card {
-  width: 300px;
+  width: 650px;
+  min-height: 600px;
   background: #1a1a1a;
   border: 1px solid #333;
   border-radius: 12px;
@@ -14,11 +46,17 @@
   text-align: center;
   color: #f0f0f0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .song-card h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .song-card .song-meta {
@@ -56,4 +94,13 @@
 
 .controls button {
   margin: 0 0.5rem;
+}
+
+.card-label {
+  font-weight: bold;
+  font-size: 2.1rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #61dafb; /* or any accent color */
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function SongCard({ title, artist, album, year }) {
+export default function SongCard({ title, artist, album, year, label }) {
   const [albumArt, setAlbumArt] = useState(null);
   const [embedUrl, setEmbedUrl] = useState("");
 
@@ -30,6 +30,7 @@ export default function SongCard({ title, artist, album, year }) {
 
   return (
     <div className="song-card">
+      <div className="card-label">{label}</div>
       {albumArt && (
         <img
           className="album-art"
