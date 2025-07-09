@@ -30,28 +30,40 @@ export default function SongCard({ title, artist, album, year }) {
 
   return (
     <div className="song-card">
-      <h3>{title}</h3>
-      <p>
-        {artist} — {album} ({year})
-      </p>
-
       {albumArt && (
         <img
+          className="album-art"
           src={albumArt}
           alt={`${album} album cover`}
-          style={{ width: "200px", height: "200px", objectFit: "cover" }}
         />
       )}
 
+      <h3>{title}</h3>
+      <p className="song-meta">
+        {artist} &middot; <em>{album}</em> ({year})
+      </p>
+
       {embedUrl && (
-        <iframe
-          src={embedUrl}
-          width="300"
-          height="80"
-          frameBorder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
+        <div className="embed-container">
+          <p className="embed-label">Spotify Preview</p>
+          <iframe
+            src={embedUrl}
+            width="100%"
+            height="80"
+            frameBorder="0"
+            allow="encrypted-media"
+            allowTransparency="true"
+          ></iframe>
+          <p className="open-link">
+            <a
+              href={embedUrl.replace("/embed/", "/")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Spotify
+            </a>
+          </p>
+        </div>
       )}
     </div>
   );

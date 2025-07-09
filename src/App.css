@@ -1,12 +1,3 @@
-main {
-  padding: 2rem;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  text-align: center;
-}
-
 .song-container {
   display: flex;
   flex-wrap: wrap;
@@ -14,10 +5,55 @@ h1 {
   justify-content: center;
 }
 
-.song {
+.song-card {
   width: 300px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #f0f0f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.song-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.song-card .song-meta {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.song-card .album-art {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  padding: 1rem;
+  object-fit: cover;
+}
+
+.song-card .embed-container {
+  margin-top: 1rem;
+}
+
+.song-card .embed-label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.song-card .open-link a {
+  font-size: 0.8rem;
+  color: #61dafb;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.controls button {
+  margin: 0 0.5rem;
 }

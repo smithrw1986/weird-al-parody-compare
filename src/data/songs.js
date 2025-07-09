@@ -209,22 +209,6 @@ export const songPairs = [
   },
   {
     parody: {
-      title: "Word Crimes",
-      artist: "Weird Al Yankovic",
-      album: "Mandatory Fun",
-      year: 2014,
-      songName: "Word Crimes",
-    },
-    original: {
-      title: "Blurred Lines",
-      artist: "Robin Thicke",
-      album: "Blurred Lines",
-      year: 2013,
-      songName: "Blurred Lines",
-    },
-  },
-  {
-    parody: {
       title: "Foil",
       artist: "Weird Al Yankovic",
       album: "Mandatory Fun",
@@ -269,6 +253,22 @@ export const songPairs = [
       album: "Millennium",
       year: 1999,
       songName: "I Want It That Way",
+    },
+  },
+  {
+    parody: {
+      title: "Word Crimes",
+      artist: "Weird Al Yankovic",
+      album: "Mandatory Fun",
+      year: 2014,
+      songName: "Word Crimes",
+    },
+    original: {
+      title: "Blurred Lines",
+      artist: "Robin Thicke",
+      album: "Blurred Lines",
+      year: 2013,
+      songName: "Blurred Lines",
     },
   },
   {
