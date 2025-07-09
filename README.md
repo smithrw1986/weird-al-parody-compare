@@ -7,7 +7,7 @@ A fun web app that lets you compare "Weird Al" Yankovic’s hilarious parodies w
 ## Screenshot & Demo
 
 [Visit the live site](https://weird-al-parody-compare.netlify.app)
-![Landing Page](./assets/Parody_Comparison.png)
+![Landing Page](./src/assets/Parody_Comparison.png)
 
 ---
 
