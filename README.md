@@ -1,12 +1,42 @@
-# React + Vite
+# "Weird Al" Parody Comparison
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun web app that lets you compare "Weird Al" Yankovic’s hilarious parodies with the original hit songs they spoofed. Watch official music videos side by side, listen to Spotify snippets, and swipe through numerous classic song pairs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshot & Demo
 
-## Expanding the ESLint configuration
+[Visit the live site](https://weird-al-parody-compare.netlify.app)
+![Landing Page](./assets/Parody_Comparison.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Displays "Weird Al" parody vs. original song side-by-side
+- Embedded **YouTube videos** for full music videos
+- Embedded **Spotify player** for audio snippets
+- Swipeable carousel (powered by Swiper.js) for easy browsing
+- Fully responsive design for mobile and desktop
+- Hosted live on Netlify
+
+---
+
+## Built With
+
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [Swiper.js](https://swiperjs.com/) for carousel swiping
+- [Spotify Web API](https://developer.spotify.com/documentation/web-api/) (for track search)
+- Netlify Functions for dynamic Spotify embed URLs
+
+---
+
+## Author
+
+Ryan Smith: [smithrw1986 on GitHub](https://github.com/smithrw1986)
+
+---
+
+## License
+
+This project is for educational & portfolio use only. All song content belongs to the original artists and rights holders.
