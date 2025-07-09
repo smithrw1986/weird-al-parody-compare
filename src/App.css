@@ -53,7 +53,7 @@ body {
 }
 
 .site-title {
-  margin: 2rem;
+  margin: 1rem;
   text-align: center;
   color: #111;
   text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5);
@@ -144,4 +144,23 @@ body {
   margin-bottom: 1rem;
   text-transform: uppercase;
   color: #61dafb;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #111;
+}
+
+.swiper-pagination-bullet {
+  background: #111;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  padding-bottom: 3.5rem;
 }
