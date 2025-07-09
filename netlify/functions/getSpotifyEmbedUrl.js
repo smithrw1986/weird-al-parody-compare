@@ -50,9 +50,10 @@ export async function handler(event) {
 
   const trackId = searchData.tracks.items[0].id;
   const embedUrl = `https://open.spotify.com/embed/track/${trackId}`;
+  const albumArt = track.album.images[0].url;
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ embedUrl }),
+    body: JSON.stringify({ embedUrl, albumArt }),
   };
 }

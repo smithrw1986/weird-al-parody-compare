@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function SongCard({ title, artist, album, year }) {
+  const [albumArt, setAlbumArt] = useState(null);
   const [embedUrl, setEmbedUrl] = useState("");
 
   useEffect(() => {
@@ -21,26 +22,36 @@ export default function SongCard({ title, artist, album, year }) {
       const data = await res.json();
       if (data.embedUrl) {
         setEmbedUrl(data.embedUrl);
+        setAlbumArt(data.albumArt);
       }
     }
     fetchEmbed();
   }, [title, artist]);
 
   return (
-    <div className="song">
-      <h2>{title}</h2>
-      <p>Artist: {artist}</p>
-      {embedUrl ? (
+    <div className="song-card">
+      <h3>{title}</h3>
+      <p>
+        {artist} — {album} ({year})
+      </p>
+
+      {albumArt && (
+        <img
+          src={albumArt}
+          alt={`${album} album cover`}
+          style={{ width: "200px", height: "200px", objectFit: "cover" }}
+        />
+      )}
+
+      {embedUrl && (
         <iframe
-          style={{ borderRadius: "12px" }}
           src={embedUrl}
-          width="100%"
-          height="152"
+          width="300"
+          height="80"
           frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          allowtransparency="true"
+          allow="encrypted-media"
         ></iframe>
-      ) : (
-        <p>Loading...</p>
       )}
     </div>
   );
