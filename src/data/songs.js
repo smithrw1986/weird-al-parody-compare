@@ -1,18 +1,18 @@
 export const songPairs = [
   {
     parody: {
-      title: "Like a Surgeon",
+      title: "I Love Rocky Road",
       artist: "Weird Al Yankovic",
-      album: "Dare to Be Stupid",
-      year: 1985,
-      songName: "Like a Surgeon",
+      album: "Weird Al Yankovic",
+      year: 1983,
+      songName: "I Love Rocky Road",
     },
     original: {
-      title: "Like a Virgin",
-      artist: "Madonna",
-      album: "Like a Virgin",
-      year: 1984,
-      songName: "Like a Virgin",
+      title: "I Love Rock 'n' Roll",
+      artist: "Joan Jett & the Blackhearts",
+      album: "I Love Rock 'n Roll",
+      year: 1981,
+      songName: "I Love Rock 'n' Roll",
     },
   },
   {
@@ -29,6 +29,22 @@ export const songPairs = [
       album: "Thriller",
       year: 1982,
       songName: "Beat It",
+    },
+  },
+  {
+    parody: {
+      title: "The Saga Begins",
+      artist: "Weird Al Yankovic",
+      album: "Running with Scissors",
+      year: 1999,
+      songName: "The Saga Begins",
+    },
+    original: {
+      title: "American Pie",
+      artist: "Don McLean",
+      album: "American Pie",
+      year: 1971,
+      songName: "American Pie",
     },
   },
   {
@@ -65,22 +81,6 @@ export const songPairs = [
   },
   {
     parody: {
-      title: "Smells Like Nirvana",
-      artist: "Weird Al Yankovic",
-      album: "Off the Deep End",
-      year: 1992,
-      songName: "Smells Like Nirvana",
-    },
-    original: {
-      title: "Smells Like Teen Spirit",
-      artist: "Nirvana",
-      album: "Nevermind",
-      year: 1991,
-      songName: "Smells Like Teen Spirit",
-    },
-  },
-  {
-    parody: {
       title: "Fat",
       artist: "Weird Al Yankovic",
       album: "Even Worse",
@@ -113,22 +113,6 @@ export const songPairs = [
   },
   {
     parody: {
-      title: "Jurassic Park",
-      artist: "Weird Al Yankovic",
-      album: "Alapalooza",
-      year: 1993,
-      songName: "Jurassic Park",
-    },
-    original: {
-      title: "MacArthur Park",
-      artist: "Richard Harris",
-      album: "A Tramp Shining",
-      year: 1968,
-      songName: "MacArthur Park",
-    },
-  },
-  {
-    parody: {
       title: "Another One Rides the Bus",
       artist: "Weird Al Yankovic",
       album: "Weird Al Yankovic",
@@ -141,22 +125,6 @@ export const songPairs = [
       album: "The Game",
       year: 1980,
       songName: "Another One Bites the Dust",
-    },
-  },
-  {
-    parody: {
-      title: "I Love Rocky Road",
-      artist: "Weird Al Yankovic",
-      album: "Weird Al Yankovic",
-      year: 1983,
-      songName: "I Love Rocky Road",
-    },
-    original: {
-      title: "I Love Rock 'n' Roll",
-      artist: "Joan Jett & the Blackhearts",
-      album: "I Love Rock 'n Roll",
-      year: 1981,
-      songName: "I Love Rock 'n' Roll",
     },
   },
   {
@@ -177,54 +145,6 @@ export const songPairs = [
   },
   {
     parody: {
-      title: "The Saga Begins",
-      artist: "Weird Al Yankovic",
-      album: "Running with Scissors",
-      year: 1999,
-      songName: "The Saga Begins",
-    },
-    original: {
-      title: "American Pie",
-      artist: "Don McLean",
-      album: "American Pie",
-      year: 1971,
-      songName: "American Pie",
-    },
-  },
-  {
-    parody: {
-      title: "Pretty Fly for a Rabbi",
-      artist: "Weird Al Yankovic",
-      album: "Running with Scissors",
-      year: 1999,
-      songName: "Pretty Fly for a Rabbi",
-    },
-    original: {
-      title: "Pretty Fly (for a White Guy)",
-      artist: "The Offspring",
-      album: "Americana",
-      year: 1998,
-      songName: "Pretty Fly (for a White Guy)",
-    },
-  },
-  {
-    parody: {
-      title: "It's All About the Pentiums",
-      artist: "Weird Al Yankovic",
-      album: "Running with Scissors",
-      year: 1999,
-      songName: "It's All About the Pentiums",
-    },
-    original: {
-      title: "It's All About the Benjamins",
-      artist: "Puff Daddy",
-      album: "No Way Out",
-      year: 1997,
-      songName: "It's All About the Benjamins",
-    },
-  },
-  {
-    parody: {
       title: "Handy",
       artist: "Weird Al Yankovic",
       album: "Mandatory Fun",
@@ -241,6 +161,22 @@ export const songPairs = [
   },
   {
     parody: {
+      title: "Jurassic Park",
+      artist: "Weird Al Yankovic",
+      album: "Alapalooza",
+      year: 1993,
+      songName: "Jurassic Park",
+    },
+    original: {
+      title: "MacArthur Park",
+      artist: "Richard Harris",
+      album: "A Tramp Shining",
+      year: 1968,
+      songName: "MacArthur Park",
+    },
+  },
+  {
+    parody: {
       title: "Tacky",
       artist: "Weird Al Yankovic",
       album: "Mandatory Fun",
@@ -253,6 +189,22 @@ export const songPairs = [
       album: "Girl",
       year: 2013,
       songName: "Happy",
+    },
+  },
+  {
+    parody: {
+      title: "Pretty Fly for a Rabbi",
+      artist: "Weird Al Yankovic",
+      album: "Running with Scissors",
+      year: 1999,
+      songName: "Pretty Fly for a Rabbi",
+    },
+    original: {
+      title: "Pretty Fly (for a White Guy)",
+      artist: "The Offspring",
+      album: "Americana",
+      year: 1998,
+      songName: "Pretty Fly (for a White Guy)",
     },
   },
   {
@@ -333,6 +285,22 @@ export const songPairs = [
       album: "Born This Way",
       year: 2011,
       songName: "Born This Way",
+    },
+  },
+  {
+    parody: {
+      title: "It's All About the Pentiums",
+      artist: "Weird Al Yankovic",
+      album: "Running with Scissors",
+      year: 1999,
+      songName: "It's All About the Pentiums",
+    },
+    original: {
+      title: "It's All About the Benjamins",
+      artist: "Puff Daddy",
+      album: "No Way Out",
+      year: 1997,
+      songName: "It's All About the Benjamins",
     },
   },
   {
