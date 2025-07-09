@@ -41,10 +41,12 @@ export async function handler(event) {
 
   const searchData = await searchRes.json();
 
-  if (searchData.tracks.items.length === 0) {
+  if (!searchData.tracks || !searchData.tracks.items) {
     return {
-      statusCode: 404,
-      body: JSON.stringify({ error: "Track not found" }),
+      statusCode: 500,
+      body: JSON.stringify({
+        error: "Spotify search failed or malformed response.",
+      }),
     };
   }
 
