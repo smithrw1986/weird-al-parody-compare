@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function SongCard({ title, artist }) {
+export default function SongCard({ title, artist, album, year }) {
   const [embedUrl, setEmbedUrl] = useState("");
 
   useEffect(() => {
