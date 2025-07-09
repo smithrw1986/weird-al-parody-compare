@@ -65,13 +65,14 @@ export default function SongCard({
             loading="lazy"
             allowTransparency="true"
           ></iframe>
-          <p className="open-link">
+          <p class="open-link">
             <a
               href={embedUrl.replace("/embed/", "/")}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Have a Listen on Spotify
+              Listen on Spotify (volume unable to be controlled in embedded
+              player - sorry!)
             </a>
           </p>
         </div>
