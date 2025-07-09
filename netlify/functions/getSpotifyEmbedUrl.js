@@ -8,7 +8,7 @@ export async function handler(event) {
     };
   }
 
-  const { track, artist } = JSON.parse(event.body);
+  const { track: trackName, artist } = JSON.parse(event.body);
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const authString = Buffer.from(`${clientId}:${clientSecret}`).toString(
@@ -27,7 +27,7 @@ export async function handler(event) {
   const tokenData = await tokenRes.json();
   const accessToken = tokenData.access_token;
 
-  const searchQuery = `track:${track} artist:${artist}`;
+  const searchQuery = `track:${trackName} artist:${artist}`;
   const searchRes = await fetch(
     `https://api.spotify.com/v1/search?q=${encodeURIComponent(
       searchQuery
@@ -48,9 +48,10 @@ export async function handler(event) {
     };
   }
 
-  const trackId = searchData.tracks.items[0].id;
+  const spotifyTrack = searchData.tracks.items[0];
+  const trackId = spotifyTrack.id;
   const embedUrl = `https://open.spotify.com/embed/track/${trackId}`;
-  const albumArt = track.album.images[0].url;
+  const albumArt = spotifyTrack.album.images[0].url;
 
   return {
     statusCode: 200,
